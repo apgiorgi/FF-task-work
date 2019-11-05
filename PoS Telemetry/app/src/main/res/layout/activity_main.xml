@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:animateLayoutChanges="true"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="28dp"
+        android:onClick="buttonSendOnClick"
+        android:stateListAnimator="@null"
+        android:text="Send"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/downlinkVal" />
+
+    <TextView
+        android:id="@+id/downlinkLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Downlink Data Usage (kBytes)"
+        android:textAlignment="viewEnd"
+        android:textIsSelectable="false"
+        android:textSize="18sp"
+        android:typeface="sans"
+        app:layout_constraintEnd_toEndOf="@+id/uplinkLabel"
+        app:layout_constraintTop_toBottomOf="@+id/uplinkVal" />
+
+    <TextView
+        android:id="@+id/uplinkLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Uplink Data Usage (kBytes)"
+        android:textAlignment="viewEnd"
+        android:textIsSelectable="false"
+        android:textSize="18sp"
+        android:typeface="sans"
+        app:layout_constraintEnd_toEndOf="@+id/temperatureLabel"
+        app:layout_constraintTop_toBottomOf="@+id/temperatureVal" />
+
+    <TextView
+        android:id="@+id/temperatureLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:text="Temperature (˚C)"
+        android:textAlignment="viewEnd"
+        android:textIsSelectable="false"
+        android:textSize="18sp"
+        android:typeface="sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/intervalBar"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="88dp"
+        android:max="600"
+        android:min="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/temperatureVal"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:editable="true"
+        android:ems="10"
+        android:focusedByDefault="false"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="true"
+        android:text="0.0"
+        android:textAlignment="viewEnd"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="@+id/temperatureLabel"
+        app:layout_constraintTop_toBottomOf="@+id/temperatureLabel" />
+
+    <EditText
+        android:id="@+id/uplinkVal"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:editable="true"
+        android:ems="10"
+        android:focusedByDefault="false"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="true"
+        android:text="0.0"
+        android:textAlignment="viewEnd"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="@+id/uplinkLabel"
+        app:layout_constraintTop_toBottomOf="@+id/uplinkLabel" />
+
+    <EditText
+        android:id="@+id/downlinkVal"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:editable="true"
+        android:ems="10"
+        android:focusedByDefault="false"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="true"
+        android:text="0.0"
+        android:textAlignment="viewEnd"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="@+id/downlinkLabel"
+        app:layout_constraintTop_toBottomOf="@+id/downlinkLabel" />
+
+    <TextView
+        android:id="@+id/intervalVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="0 s"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/intervalBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/periodicSwitch"
+        android:layout_width="122dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:onClick="periodicSwitchOnClick"
+        android:text="Periodic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intervalBar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bannerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/statusLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="96dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/felfel_logo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/flipButton"
+        style="@android:style/Widget.Material.Button.Borderless"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="24dp"
+        android:onClick="flipButtonOnClick"
+        android:paddingTop="0dp"
+        android:text="!"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

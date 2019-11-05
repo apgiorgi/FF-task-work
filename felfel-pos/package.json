@@ -1,0 +1,15 @@
+{
+  "name": "felfel-pos",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "@slack/webhook": "^5.0.2",
+    "azure-iothub": "^1.11.0",
+    "flatted": "^2.0.1",
+    "twilio": "^3.37.0"
+  },
+  "devDependencies": {}
+}

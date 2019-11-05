@@ -1,0 +1,12 @@
+{
+  "bindings": [
+    {
+      "name": "mySbMsg",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "topicName": "temperature-anomaly-alert",
+      "subscriptionName": "temperature-anomaly-alert-sms",
+      "connection": "felfel-pos_RootManageSharedAccessKey_SERVICEBUS"
+    }
+  ]
+}

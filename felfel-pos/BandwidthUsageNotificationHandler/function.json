@@ -1,0 +1,12 @@
+{
+  "bindings": [
+    {
+      "name": "mySbMsg",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "topicName": "bandwidth-anomaly",
+      "subscriptionName": "bandwidth-anomaly-notification",
+      "connection": "felfel-pos_RootManageSharedAccessKey_SERVICEBUS"
+    }
+  ]
+}
